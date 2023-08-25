@@ -1,0 +1,680 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.filter-buttons{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 60px;
+	margin-top: 60px;
+	gap : 20px;
+}
+
+.filter-buttons button{
+	min-width: 100px;
+	padding: 9px;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 37px;
+	flex-shrink: 0;
+	border-radius: 60px;
+	border: 1px solid #1D6154;
+	color: #1D6154;
+	text-align: center;
+	font-family: Syne;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.filter-buttons button:hover{
+	border-radius: 60px;
+	border: 1px solid #1D6154;
+	background: #1D6154;
+	color: #FFF;
+	text-align: center;
+	font-family: Syne;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+
+.category-info {
+	display: none;
+}
+
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+
+/* Page de login */
+
+.login-container{
+	margin-top: 100px;
+	display : flex;
+	flex-direction: column;
+	gap : 37px;
+	justify-content: center;
+	align-items: center;
+	position : relative;
+}
+
+.form-group{
+	display : flex;
+	flex-direction : column;
+	gap : 7px;
+}
+
+.login-form{
+	display : flex;
+	flex-direction : column;
+	justify-content: center;
+	align-items: center;
+	gap : 30px;
+}
+
+.form-button{
+	border-radius: 60px;
+	background: #1D6154;
+	width: 179px;
+	height: 36px;
+	flex-shrink: 0;
+	border: #1D6154;
+	color: #FFF;
+	text-align: center;
+	font-family: Syne;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.form-label{
+	color: #3D3D3D;
+	font-family: Work Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.form-group input{
+	width: 379px;
+	height: 51px;
+	flex-shrink: 0;
+	background: #FFF;
+	box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+	border : 0;
+}
+
+.forgot-password a{
+	color: #3D3D3D;
+font-family: Work Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-decoration-line: underline;
+}
+
+#logout-link{
+	display : none;
+}
+
+#logout-link a{
+	text-decoration: none;
+}
+
+#login-link a{
+	text-decoration: none;
+}
+
+#modale{
+	display: flex;
+	flex-direction: row;
+	gap : 20px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	width: 100%;
+	height: 59px;
+	flex-shrink: 0;
+	margin : 0;
+}
+
+/* Gestion de la modale */
+
+#modale a{
+	color: #FFF;
+	text-align: center;
+	font-family: Work Sans;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+#modale button{
+	width: 216px;
+	height: 38px;
+	flex-shrink: 0;
+	border-color: #FFF;
+	border-radius: 60px;
+	background: #FFF;
+	color: #000;
+	text-align: center;
+	font-family: Work Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur d'assombrissement */
+    z-index: 999; /* Mettre au-dessus de tout le reste */
+    display: none; /* Par défaut, masqué */
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1000; /* Au-dessus du fond assombri */
+    display: none; /* Par défaut, masqué */
+	max-width: 44%;
+	max-height : 730px;
+	border-radius: 10px;
+}
+
+.modal__galerieFlexbox{
+	display: flex;
+	flex-direction: column;
+	gap : 30px;
+	justify-content: center;
+	align-items: center;
+}
+
+#closeModalIcon{
+	cursor: pointer;
+	position: absolute;
+    top: 20px; 
+    right: 20px; 
+}
+
+#closeModalIcon2{
+	cursor: pointer;
+	position: absolute;
+    top: 20px; 
+    right: 20px; 
+}
+
+#backButton {
+	cursor: pointer;
+	position: absolute;
+    top: 20px; 
+    left: 20px; 
+}
+
+.modale__galerie{
+	display : flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap : 6.25px;
+	max-width: 420px;
+	margin-top: 10px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #B3B3B3;
+}
+
+.modal__galerieFlexbox a{
+	color : red;
+}
+
+.modal__galerieFlexbox button{
+	width: 237px;
+	height: 36px;
+	flex-shrink: 0;
+	border-radius: 60px;
+	background: #1D6154;
+	color: #FFF;
+	text-align: center;
+	font-family: Syne;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	border : 0px;
+}
+
+.galerie{
+	padding : 30px 100px 25px 100px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+/* CSS MODALE N 2 */
+
+.flexbox__modal2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap : 10px;
+	margin-top : 35px;
+	margin-bottom: 15px;
+} 
+
+.flexbox__modal2 h2{
+	color: #000;
+text-align: center;
+font-family: Work Sans;
+font-size: 26px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+#modal2{
+	max-width: 44%;
+	max-height: 730px;
+	padding: 0px 100px 0px 100px;
+}
+
+.ajout__photo{
+	width: 420px;
+	height: 169px;
+	border-radius: 3px;
+	background: #E8F1F6;
+	display : flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top : 30px;
+}
+
+.ajout__photo .illustration{
+margin-bottom: 15px;
+}
+
+.ajout__photo p{
+	color: #444;
+	text-align: center;
+	font-family: Work Sans;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.ajout__photo input{
+	display : none;
+}
+
+#upload__photo{
+	width: 173px;
+	height: 36px;
+	border-radius: 50px;
+	background: #CBD6DC;
+	color: #306685;
+	text-align: center;
+	font-family: Work Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	cursor : pointer;
+	border-color: transparent;
+	margin-bottom: 7px;
+}
+
+#uploadButton{
+	width: 173px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #CBD6DC;
+    color: #306685;
+    text-align: center;
+    font-family: Work Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-bottom : 7px;
+}
+
+
+#photoForm{
+	display : flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap : 10px;
+}
+
+#photoForm input{
+		width: 420px;
+		height: 36px;
+		border: none; 
+		background: #FFF;
+		box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+		border-radius: 3px 3px 0 0;
+}
+
+#photoForm select{
+	width: 420px;
+	height: 36px;
+	border: none; 
+	background: #FFF;
+	box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+	border-radius: 3px 3px 0 0;
+}
+
+#photoForm h3{
+	color: #3D3D3D;
+	font-family: Work Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	width : 100%;
+	margin-top: 20px;
+}
+
+#photoForm button{
+	width: 237px;
+	height: 36px;
+	flex-shrink: 0;
+	border-radius: 60px;
+	background: #A7A7A7;
+	color: #FFF;
+	text-align: center;
+	font-family: Syne;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	border-color: transparent;
+}
+
+#photoForm img{
+	margin : 20px 0px 20px 0px;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1; /* Pour superposer l'icône sur l'image */
+}
+
+/* Ajout de style pour le message de succès */
+.success-message {
+	display : none;
+	flex-shrink: 0;
+	border-radius: 60px;
+	background: #1D6154;
+	color: #FFF;
+	font-family: Syne;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 20%;
+    left: -25%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* Ajoute le style pour le message de suppression réussie */
+.deleteMessage {
+	display : none;
+	flex-shrink: 0;
+	border-radius: 60px;
+	background: #1D6154;
+	color: #FFF;
+	font-family: Syne;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 20%;
+    left: -25%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+
+.show {
+    display: block;
+}
+
+
+.message{
+	position: absolute;
+    bottom: 10px; /* Ajustez la distance depuis le bas selon vos besoins */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond semi-transparente */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+	display : none;
+}
