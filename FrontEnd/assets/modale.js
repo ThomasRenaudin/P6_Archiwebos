@@ -35,5 +35,5 @@
         overlay.style.display = 'none';
         modal1.style.display = 'none';
         modal2.style.display = 'none';
-        location.reload();
+        //location.reload();
     }
