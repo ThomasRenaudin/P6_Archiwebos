@@ -678,3 +678,12 @@ margin-bottom: 15px;
     font-size: 14px;
 	display : none;
 }
+
+figure img{
+	object-fit: cover;
+	height : 95.5%;
+}
+
+.image-container img{
+	object-fit: cover;
+}
