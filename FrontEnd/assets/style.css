@@ -167,6 +167,22 @@ li:hover {
 	line-height: normal;
 }
 
+.flexmodif{
+	display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.modifications{
+	display: flex;
+	flex-direction: row;
+	gap : 10px;
+}
+
+
 .gallery {
 	width: 100%;
 	display: grid;

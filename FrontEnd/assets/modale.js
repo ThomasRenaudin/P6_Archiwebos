@@ -1,4 +1,5 @@
     const openModalLink = document.getElementById('openModal');
+
     const closeModalIcon = document.getElementById('closeModalIcon');
     const closeModalIcon2 = document.getElementById('closeModalIcon2');
     const overlay = document.getElementById('overlay');
@@ -12,6 +13,7 @@
         overlay.style.display = 'block';
         modal1.style.display = 'block';
     });
+
 
     // Fermer les modales
     closeModalIcon.addEventListener('click', closeModals);

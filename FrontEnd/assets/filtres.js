@@ -8,6 +8,7 @@ window.addEventListener('load', async () => {
         
         if (categories.length > 0) {
             generateFilterButtons(categories);
+            toggleModificationsVisibility(); // Appel pour gérer la visibilité de la div "Modifications"
         }
     } catch (error) {
         console.error('Une erreur s\'est produite lors de la récupération des catégories :', error);
@@ -17,6 +18,9 @@ window.addEventListener('load', async () => {
 // Fonction pour générer les boutons de filtre dynamiquement
 function generateFilterButtons(categories) {
     const filterButtonsContainer = document.querySelector('.filter-buttons');
+
+    // Vérification si un token JWT est déjà stocké dans le stockage local
+    const jwtToken = localStorage.getItem('jwt_token');
 
     const allButton = document.createElement('button');
     allButton.textContent = 'Tous';
@@ -29,8 +33,13 @@ function generateFilterButtons(categories) {
         button.addEventListener('click', () => filterWorksByCategory(category.id));
         filterButtonsContainer.appendChild(button);
     });
-    
-    
+
+    // Appliquer la logique de visibilité
+    if (jwtToken) {
+        filterButtonsContainer.style.display = 'none'; // Cache les filtres
+    } else {
+        filterButtonsContainer.style.display = 'flex'; // Affiche les filtres
+    }
 }
 
 // Fonction pour filtrer les œuvres par catégorie
@@ -56,4 +65,16 @@ function showAllWorks() {
     allFigures.forEach(figure => {
         figure.style.display = 'block';
     });
+}
+
+// Fonction pour gérer la visibilité de la div "Modifications"
+function toggleModificationsVisibility() {
+    const jwtToken = localStorage.getItem('jwt_token');
+    const modificationsDiv = document.getElementById('modifications');
+    
+    if (jwtToken) {
+        modificationsDiv.style.display = 'flex'; // Affiche la div "Modifications"
+    } else {
+        modificationsDiv.style.display = 'none'; // Cache la div "Modifications"
+    }
 }
